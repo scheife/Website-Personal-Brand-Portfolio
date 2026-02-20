@@ -4,7 +4,7 @@ Servus! Das ist der Quellcode für meine persönliche Portfolio-Website.
 Die Seite dient als digitale Visitenkarte und präsentiert meine Fähigkeiten in den Bereichen Logistik-Management, Handwerk und mein wachsendes Interesse an moderner Web-Technologie.
 
 ## Live Demo
-Du kannst die Seite hier besuchen: [###]
+Du kannst die Seite hier besuchen: [https://scheife.github.io/Website-Personal-Brand-Portfolio/]
 
 ## Tech Stack & Features
 - **Frontend:** HTML5, CSS3, JavaScript

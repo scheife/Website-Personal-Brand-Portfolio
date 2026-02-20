@@ -99,7 +99,7 @@ section {
   display: flex;
   align-items: center;
   padding: 0 9%;
-  background: url("/HTML-CSS/Website_Personal_Portfolio/assets/images/home.jpg") no-repeat;
+  background: url("assets/images/home.jpg") no-repeat;
   background-size: cover;
   background-position: center;
 }
