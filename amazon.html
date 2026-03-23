@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empfohlene Produkte | Alexander Kai Scheiflinger</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    
+    <style>
+        .amazon-section {
+            padding: 15rem 7% 5rem;
+            min-height: 100vh;
+        }
+
+        .amazon-content {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .amazon-content h1 {
+            font-size: 3.5rem;
+            color: var(--main-color);
+            margin-bottom: 1rem;
+        }
+
+        .disclaimer {
+            font-size: 1.4rem;
+            font-style: italic;
+            margin-bottom: 4rem;
+            color: var(--text-color);
+            border-left: 3px solid var(--main-color);
+            padding-left: 1.5rem;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+
+        .product-card {
+            background: var(--second-bg-color);
+            border: 2px solid transparent;
+            border-radius: 1rem;
+            padding: 2rem;
+            transition: 0.3s;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .product-card:hover {
+            border-color: var(--main-color);
+            transform: translateY(-5px);
+        }
+
+        .product-card h3 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .product-card p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .btn-amazon {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: var(--main-color);
+            color: var(--bg-color);
+            border-radius: 0.5rem;
+            font-weight: 600;
+            text-align: center;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .btn-amazon:hover {
+            box-shadow: 0 0 1rem var(--main-color);
+        }
+
+        .category-title {
+            font-size: 2.5rem;
+            margin: 4rem 0 2rem;
+            border-bottom: 2px solid var(--main-color);
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="header sticky">
+        <a href="index.html" class="logo">Alex.</a>
+        <nav class="navbar">
+            <a href="index.html">Zurück</a>
+        </nav>
+    </header>
+
+    <section class="amazon-section">
+        <div class="amazon-content">
+            <h1>Meine Ausrüstung & Empfehlungen</h1>
+            <p class="disclaimer">
+                Hinweis: Die folgenden Links sind Affiliate-Links. Wenn du über diese Links etwas kaufst, 
+                erhalte ich eine kleine Provision von Amazon – für dich entstehen dabei keine Mehrkosten. 
+                Vielen Dank für die Unterstützung!
+            </p>
+
+            <h2 class="category-title">Handwerk & Werkzeug</h2>
+            <div class="product-grid">
+                
+                <div class="product-card">
+                    <div>
+                        <h3>Wiper Bowl Polytex Reinigungstücher</h3>
+                        <p>Perfekt zum reinigen der Hände.</p>
+                    </div>
+                    <a href="https://amzn.to/3NSsPAs" class="btn-amazon" target="_blank" rel="nofollow">Auf Amazon ansehen*</a>
+                </div>
+
+                <div class="product-card">
+                    <div>
+                        <h3>Wera Bit-Check</h3>
+                        <p>Kompaktes Bit-Set, das in keiner Hosentasche fehlen darf, wenn man mobil unterwegs ist.</p>
+                    </div>
+                    <a href="DEIN_SITE_STRIPE_LINK_HIER" class="btn-amazon" target="_blank" rel="nofollow">Auf Amazon ansehen*</a>
+                </div>
+
+            </div>
+
+            <h2 class="category-title">Logistik & Technik</h2>
+            <div class="product-grid">
+                
+                <div class="product-card">
+                    <div>
+                        <h3>Handscanner Schutzhülle</h3>
+                        <p>Ein nützliches Zubehör, um professionelle Logistik-Hardware im Alltag zu schützen.</p>
+                    </div>
+                    <a href="DEIN_SITE_STRIPE_LINK_HIER" class="btn-amazon" target="_blank" rel="nofollow">Auf Amazon ansehen*</a>
+                </div>
+
+                <div class="product-card">
+                    <div>
+                        <h3>Fachbuch Logistikmanagement</h3>
+                        <p>Eines der besten Bücher, um die theoretischen Grundlagen der Prozessoptimierung zu verstehen.</p>
+                    </div>
+                    <a href="DEIN_SITE_STRIPE_LINK_HIER" class="btn-amazon" target="_blank" rel="nofollow">Auf Amazon ansehen*</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-text">
+            <p>Copyright &copy; 2026 Alexander Kai Scheiflinger</p>
+        </div>
+    </footer>
+
+</body>
+</html>
