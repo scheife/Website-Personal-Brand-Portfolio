@@ -1095,3 +1095,21 @@ span {
     grid-template-columns: 1fr;
   }
 }
+
+
+.category-title {
+  font-size: 2.5rem;
+  margin: 6rem 0 2rem; /* Mehr Abstand nach oben für klare Trennung */
+  padding-bottom: 0.5rem;
+  border-bottom: 3px solid var(--main-color);
+  display: block; /* Block sorgt dafür, dass die Linie die Breite nutzt */
+  color: var(--main-color);
+}
+
+  /* Optional: Ein kleiner Zähler oder ein Bullet-Point vor der Überschrift */
+.category-title::before {
+  content: '||'; 
+  margin-right: 1rem;
+  font-weight: bold;
+}
+
