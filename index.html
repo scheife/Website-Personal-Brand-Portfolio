@@ -1,346 +1,235 @@
 <!doctype html>
 <html lang="de">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Alexander Kai Scheiflinger | Portfolio</title>
-    <link rel="stylesheet" href="fonts/roboto.css">
+<head>
+  <meta charset="UTF-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Alexander Kai Scheiflinger | HoamatWerk</title>
+  <meta name="description" content="Alexander Kai Scheiflinger – Warehouse Supervisor, Maker und Tech-Explorer aus Kärnten. Holzwerkstatt, Smart Home, Hundetraining. Echt Hondg'mocht."/>
+  <link rel="icon" type="image/svg+xml" href="assets/HoamatWerk_Logo.svg"/>
+  <link href="https://fonts.googleapis.com/css2?family=Niconne&family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet"/>
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
 
-    <!-- box icons -->
-    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+<!-- HEADER -->
+<header class="header">
+  <a href="#" class="logo">
+    HoamatWerk
+    <span class="tagline">Echt Hondg'mocht</span>
+  </a>
+  <div class="bx bx-menu" id="menu-icon"></div>
+  <nav class="navbar">
+    <a href="#home" class="active">Home</a>
+    <a href="#about">Über Mich</a>
+    <a href="#education">Werdegang</a>
+    <a href="#skills">Skills</a>
+    <a href="#tools">Tools</a>
+    <a href="amazon.html">Empfehlungen</a>
+    <a href="#contact">Kontakt</a>
+    <span class="active-nav"></span>
+  </nav>
+</header>
 
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <!-- header design -->
-    <header class="header">
-      <a href="#" class="logo">Alex.<span class="animate" style="--i: 1"></span></a>
+<!-- HOME -->
+<section class="home show-animate" id="home">
+  <div class="home-content">
+    <div class="home-eyebrow">Kärnten · Handwerk · Technologie</div>
+    <h1>Servus, ich bin<br><span>der Alex.</span></h1>
+    <div class="text-animation">
+      <h3>Warehouse Supervisor | Macher | Tech-Explorer</h3>
+    </div>
+    <p>
+      Ich bin ein Macher aus Leidenschaft. Wo andere Probleme sehen, sehe ich Projekte.
+      Ob ich komplexe Logistikprozesse steuere, in meiner Werkstatt Unikate schaffe
+      oder mein Zuhause digital vernetze – Qualität und Struktur stehen bei mir an erster Stelle.
+    </p>
+    <div class="btn-box">
+      <a href="#about" class="btn">Über Mich</a>
+      <a href="mailto:scheiflinger@outlook.com?subject=Kontakt%20über%20HoamatWerk" class="btn">Schreib mir</a>
+    </div>
+  </div>
 
-      <div class="bx bx-menu" id="menu-icon">
-        <span class="animate" style="--i: 2"></span>
-      </div>
+  <div class="home-sci">
+    <a href="https://www.linkedin.com/in/alexander-scheiflinger/" target="_blank" rel="noopener"><i class="bx bxl-linkedin"></i></a>
+    <a href="https://www.youtube.com/@Scheiflinger" target="_blank" rel="noopener"><i class="bx bxl-youtube"></i></a>
+    <a href="https://wa.me/436601693967?text=Servus%20Alex!" target="_blank" rel="noopener"><i class="bx bxl-whatsapp"></i></a>
+    <a href="https://github.com/scheife" target="_blank" rel="noopener"><i class="bx bxl-github"></i></a>
+    <a href="https://matrix.to/#/@scheiflinger:private.coffee" target="_blank" rel="noopener"><img src="assets/matrix.svg" class="icon-matrix" alt="Matrix"/></a>
+  </div>
+  <div class="home-imgHover"></div>
+</section>
 
-      <nav class="navbar">
-        <a href="#home" class="active">Home</a>
-        <a href="#about">Über mich</a>
-        <a href="#education">Erfahrungen</a>
-        <a href="#skills">Skills</a>
-        <a href="amazon.html">Empfehlungen</a>
-        <a href="#contact">Kontakt</a>
+<!-- ÜBER MICH -->
+<section class="about" id="about">
+  <h2 class="heading" data-reveal data-delay="1">Über <span>Mich</span></h2>
 
-        <span class="active-nav"></span>
-        <span class="animate" style="--i: 2"></span>
-      </nav>
-    </header>
+  <div class="about-img" data-reveal data-delay="2">
+    <img src="assets/KI_ich_imWald.jpg" alt="Alex Scheiflinger"/>
+    <span class="circle-spin"></span>
+  </div>
 
-    <!-- home section design -->
-    <section class="home show-animate" id="home">
-      <div class="home-content">
-        <h1>Servus, ich bin der <span>Alex</span><span class="animate" style="--i: 2"></span></h1>
-        <div class="text-animation">
-          <h3>Warehouse Supervisor | Maker | Tech-Explorer</h3>
-          <span class="animate" style="--i: 3"></span>
-        </div>
-        <p>
-          Ich bin ein Macher aus Leidenschaft. Wo andere Probleme sehen, sehe ich Projekte. Ob ich komplexe
-          Logistikprozesse steuere, in meiner Werkstatt Unikate schaffe oder mein Zuhause digital vernetze – Qualität
-          und Struktur stehen bei mir an erster Stelle.
-          <span class="animate" style="--i: 4"></span>
-        </p>
+  <div class="about-content">
+    <h3 data-reveal data-delay="2">Zwischen Werkstatt, Logistik und Quellcode</h3>
+    <p data-reveal data-delay="3">
+      Ich bin Alex, ein Macher aus Kärnten, Familienvater und Warehouse Supervisor.<br/>
+      Meinen Sinn für Präzision aus dem Handwerk nutze ich heute, um komplexe Logistikprozesse zu steuern.<br/>
+      Den Ausgleich dazu finde ich bei meiner Familie, meinen Tieren oder beim Werckeln in meiner
+      Werkstatt – oder neuerdings beim Coding.
+    </p>
+    <div class="btn-box btns" data-reveal data-delay="4">
+      <a href="aboutme.html" class="btn">weiterlesen</a>
+    </div>
+  </div>
+</section>
 
-        <div class="btn-box">
-          <a href="#about" class="btn">Über Mich</a>
-          <a href="#contact" class="btn">Let's Talk</a>
-          <span class="animate" style="--i: 5"></span>
-        </div>
-      </div>
+<!-- WERDEGANG -->
+<section class="education" id="education">
+  <h2 class="heading" data-reveal data-delay="1">Mein <span>Werdegang</span></h2>
 
-      <div class="home-sci">
-        <a href="https://www.linkedin.com/in/alexander-scheiflinger/" target="_blank" rel="noopener noreferrer">
-          <i class="bx bxl-linkedin"></i>
-        </a>
-        <a href="https://www.youtube.com/@Scheiflinger" target="_blank" rel="noopener noreferrer">
-          <i class="bx bxl-youtube"></i>
-        </a>
-        <a
-          href="https://wa.me/436601693967?text=Servus%20Alex,%20ich%20habe%20deine%20Website%20gesehen!"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <i class="bx bxl-whatsapp"></i>
-        </a>
-        <a href="https://github.com/scheife" target="_blank" rel="noopener noreferrer">
-          <i class="bx bxl-github"></i>
-        </a>
-        <span class="animate" style="--i: 6"></span>
-      </div>
-
-      <div class="home-imgHover">
-        <span class="animate home-img" style="--i: 7"></span>
-      </div>
-    </section>
-
-    <!-- about section design -->
-    <section class="about" id="about">
-      <h2 class="heading">Über <span>Mich</span><span class="animate scroll" style="--i: 1"></span></h2>
-
-      <div class="about-img">
-        <img src="assets/images/KI_ich_imWald.jpg" alt="Über mich" />
-        <span class="circle-spin"></span>
-        <span class="animate scroll" style="--i: 2"></span>
-      </div>
-
-      <div class="about-content">
-        <h3>Zwischen Werkstatt, Logistik und Quellcode<span class="animate scroll" style="--i: 3"></span></h3>
-        <p>
-          Ich bin Alex, ein Macher aus Kärnten, Familienvater und Warehouse Supervisor.<br />
-          Meinen Sinn für Präzision aus dem Handwerk nutze ich heute, um komplexe Logistikprozesse zu steuern.<br />
-          Den Ausgleich dazu finde ich bei meiner Familie, meinen Tieren oder beim Werckeln in meiner
-          Werkstatt oder neuerdings beim Coding.
-          <span class="animate scroll" style="--i: 4"></span>
-        </p>
-
-        <div class="btn-box btns">
-          <a href="aboutme.html" class="btn">weiterlesen</a>
-          <span class="animate scroll" style="--i: 5"></span>
-        </div>
-      </div>
-    </section>
-
-    <!-- education section design -->
-    <section class="education" id="education">
-      <h2 class="heading">Mein <span>Werdegang</span><span class="animate scroll" style="--i: 1"></span></h2>
-
-      <div class="education-row">
-        <div class="education-column">
-          <h3 class="title">Berufliche Laufbahn<span class="animate scroll" style="--i: 2"></span></h3>
-
-          <div class="education-box">
-            <div class="education-content">
-              <div class="content">
-                <div class="year"><i class="bx bx-calendar"></i> Juli 2018 - aktuell</div>
-                <h3>Logistik-Spezialist | KMF Villach <br />(via SPB Scheiflinger)</h3>
-                <p>
-                  Verantwortlich für die gesamte Lagerorganisation im Auftrag der Omya. Ich steuere eigenständig alle
-                  Prozesse vom Wareneingang über die Kommissionierung bis hin zur versandfertigen Verpackung.
-                </p>
-              </div>
-            </div>
-
-            <div class="education-content">
-              <div class="content">
-                <div class="year"><i class="bx bx-calendar"></i> 2021 - 2024</div>
-                <h3>SzTVT - Zertifizierter Hundetrainer</h3>
-                <p>
-                  Aus Leidenschaft zum Beruf: Studium der Verhaltenslehre und Ausbildung zum Hundetrainer, inspiriert
-                  durch die Arbeit mit meinem eigenen Hund Aron.
-                </p>
-              </div>
-            </div>
-
-            <div class="education-content">
-              <div class="content">
-                <div class="year"><i class="bx bx-calendar"></i> Nov. 2017 - Mai 2018</div>
-                <h3>Leeb Balkone</h3>
-                <p>
-                  Zunständig in der Pulverbeschichtung: Vorbereitung, Beschichtung und Qualitätskontrolle von
-                  Aluminium-Elementen für die Fertigung.
-                </p>
-              </div>
-            </div>
-
-            <div class="education-content">
-              <div class="content">
-                <div class="year"><i class="bx bx-calendar"></i> Sept. 2012 - Nov. 2017</div>
-                <h3>Brandstätter GmbH.</h3>
-                <p>
-                  Ausbildung zum Maler & Beschichtungstechniker. Abschluss mit ausgezeichnetem Erfolg in der
-                  Berufsschule sowie 2. Platz beim Kärntner Landeslehrlingswettbewerb.
-                </p>
-              </div>
-            </div>
-
-            <span class="animate scroll" style="--i: 3"></span>
+  <div class="education-row">
+    <div class="education-column" data-reveal data-delay="2">
+      <h3 class="title">Berufliche Laufbahn</h3>
+      <div class="education-box">
+        <div class="education-content">
+          <div class="content">
+            <div class="year"><i class="bx bx-calendar"></i> April 2024 – heute</div>
+            <h3>Warehouse Supervisor – Omya CH73</h3>
+            <p>Alleinverantwortung für das Kundenlager bei KMF. Wareneingang, QS, internationaler Versand, Containerstauung, SAP, Verpackungsplanung (ISPM15, seemäßig).</p>
           </div>
         </div>
-
-        <div class="education-column">
-          <h3 class="title">Erfahrung<span class="animate scroll" style="--i: 5"></span></h3>
-
-          <div class="education-box">
-            <div class="education-content">
-              <div class="content">
-                <div class="year"><i class="bx bx-calendar"></i> Feb. 2026 - aktuell</div>
-                <h3>Coding | Web Development</h3>
-                <p>
-                  Aus reinem Interesse an moderner Technik lerne ich HTML5 und CSS3. Es fasziniert mich, eigene Ideen im
-                  Browser zum Leben zu erwecken und die Logik hinter Web-Schnittstellen zu verstehen.
-                </p>
-              </div>
-            </div>
-
-            <div class="education-content">
-              <div class="content">
-                <div class="year"><i class="bx bx-calendar"></i> Apr. 2024 - aktuell</div>
-                <h3>Warehouse Supervisor</h3>
-                <p>
-                  Experte für Export-Logistik: Von der strategischen Verpackungsplanung bis zur Erstellung komplexer
-                  Verladepläne für Seefracht-Container.
-                </p>
-              </div>
-            </div>
-
-            <div class="education-content">
-              <div class="content">
-                <div class="year"><i class="bx bx-calendar"></i> 2024 - aktuell</div>
-                <h3>Smart Home & Automation</h3>
-                <p>
-                  Vertiefte Kenntnisse in Home Assistant und Zigbee2MQTT. Planung und Integration einer vernetzten
-                  Infrastruktur zur Prozessoptimierung im Alltag.
-                </p>
-              </div>
-            </div>
-
-            <div class="education-content">
-              <div class="content">
-                <div class="year"><i class="bx bx-calendar"></i> 2012 - 2015</div>
-                <h3>Handwerk & Oberflächentechnik</h3>
-                <p>
-                  Fundiertes Wissen in Materialkunde und Veredelung. Mein Fokus liegt auf höchster Präzision,
-                  fachgerechter Umsetzung und professioneller Kundenkommunikation.
-                </p>
-              </div>
-            </div>
-
-            <span class="animate scroll" style="--i: 6"></span>
+        <div class="education-content">
+          <div class="content">
+            <div class="year"><i class="bx bx-calendar"></i> Juli 2018 – April 2024</div>
+            <h3>Stellv. Lagermanager – KMF Maschinenfabriken</h3>
+            <p>Lagerorganisation, Prozessoptimierung und Aufbau vollständiger Dokumentationssysteme in Excel, OneDrive und SharePoint.</p>
+          </div>
+        </div>
+        <div class="education-content">
+          <div class="content">
+            <div class="year"><i class="bx bx-calendar"></i> Nov. 2017 – Mai 2018</div>
+            <h3>Pulverbeschichter – Leeb Balkone</h3>
+            <p>Vorbereitung, Beschichtung und Qualitätskontrolle von Aluminium-Elementen für die Balkonfertigung.</p>
+          </div>
+        </div>
+        <div class="education-content">
+          <div class="content">
+            <div class="year"><i class="bx bx-calendar"></i> Sept. 2012 – Nov. 2017</div>
+            <h3>Maler & Beschichtungstechniker – Brandstätter GmbH</h3>
+            <p>Lehrabschluss mit Auszeichnung. 2. Platz Kärntner Landeslehrlingswettbewerb. Innenputz, Lackierung, Airless, Oberflächentechnik.</p>
           </div>
         </div>
       </div>
-    </section>
-    <!-- skills section design -->
-    <section class="skills" id="skills">
-      <h2 class="heading">Meine <span>Skills</span><span class="animate scroll" style="--i: 1"></span></h2>
+    </div>
 
-      <div class="skills-row">
-        <div class="skills-column">
-          <h3 class="title">Coding Skills<span class="animate scroll" style="--i: 2"></span></h3>
-
-          <div class="skills-box">
-            <div class="skills-content">
-              <div class="progress">
-                <h3>HTML <span>20%</span></h3>
-                <div class="bar"><span></span></div>
-              </div>
-
-              <div class="progress">
-                <h3>CSS <span>10%</span></h3>
-                <div class="bar"><span></span></div>
-              </div>
-
-              <div class="progress">
-                <h3>JavaScript <span>0%</span></h3>
-                <div class="bar"><span></span></div>
-              </div>
-
-              <div class="progress">
-                <h3>Python <span>5%</span></h3>
-                <div class="bar"><span></span></div>
-              </div>
-            </div>
-            <span class="animate scroll" style="--i: 3"></span>
+    <div class="education-column" data-reveal data-delay="3">
+      <h3 class="title">Zertifikate & Erfahrung</h3>
+      <div class="education-box">
+        <div class="education-content">
+          <div class="content">
+            <div class="year"><i class="bx bx-calendar"></i> Feb. 2026 – heute</div>
+            <h3>Web Development – HTML & CSS</h3>
+            <p>Aus Eigenantrieb: HTML5, CSS3 und JavaScript. Diese Website ist das erste Ergebnis – komplett selbst gebaut.</p>
           </div>
         </div>
-
-        <div class="skills-column">
-          <h3 class="title">Professional Skills<span class="animate scroll" style="--i: 4"></span></h3>
-
-          <div class="skills-box">
-            <div class="skills-content">
-              <div class="progress">
-                <h3>Home Automation <span>90%</span></h3>
-                <div class="bar"><span></span></div>
-              </div>
-
-              <div class="progress">
-                <h3>Excel <span>70%</span></h3>
-                <div class="bar"><span></span></div>
-              </div>
-
-              <div class="progress">
-                <h3>Logistik & Planung <span>80%</span></h3>
-                <div class="bar"><span></span></div>
-              </div>
-
-              <div class="progress">
-                <h3>Lagerorganisation <span>55%</span></h3>
-                <div class="bar"><span></span></div>
-              </div>
-            </div>
-            <span class="animate scroll" style="--i: 5"></span>
+        <div class="education-content">
+          <div class="content">
+            <div class="year"><i class="bx bx-calendar"></i> 2024 – heute</div>
+            <h3>Smart Home & Automation</h3>
+            <p>Home Assistant, Zigbee2MQTT, Tailscale, Shelly, Unifi mit VLAN-Struktur und Firewall. Alles selbst aufgebaut und betrieben.</p>
+          </div>
+        </div>
+        <div class="education-content">
+          <div class="content">
+            <div class="year"><i class="bx bx-calendar"></i> 2021 – 2024</div>
+            <h3>Zertifizierter Hundetrainer – TVT</h3>
+            <p>Ausbildung aus Leidenschaft, entstanden durch die Arbeit mit meinem Border Collie Aron. Fokus auf verhaltensbasiertes Training.</p>
+          </div>
+        </div>
+        <div class="education-content">
+          <div class="content">
+            <div class="year"><i class="bx bx-calendar"></i> laufend</div>
+            <h3>Scheine & Lizenzen</h3>
+            <p>Staplerschein · Hallenkranschein · Ladesicherung · Containerschulung · Ersthelfer · ISPM15</p>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </div>
+</section>
 
-    <!-- contact section design -->
-    <section class="contact" id="contact">
-      <h2 class="heading">Schreib <span>Mir</span><span class="animate scroll" style="--i: 1"></span></h2>
+<!-- SKILLS -->
+<section class="skills" id="skills">
+  <h2 class="heading" data-reveal data-delay="1">Meine <span>Skills</span></h2>
 
-      <form action="https://formspree.io/f/mbdakvvr" method="POST">
-        <div class="input-box">
-          <div class="input-field">
-            <input type="text" name="name" placeholder="Name" required />
-            <span class="focus"></span>
-            <span class="animate scroll" style="--i: 2"></span>
-          </div>
-          <div class="input-field">
-            <input type="email" name="email" placeholder="E-Mail Addresse" required />
-            <span class="focus"></span>
-            <span class="animate scroll" style="--i: 2"></span>
-          </div>
-
-          <div class="input-field">
-            <input type="tel" name="phone" placeholder="Telefonnummer" required />
-            <span class="focus"></span>
-            <span class="animate scroll" style="--i: 3"></span>
-          </div>
-          <div class="input-field">
-            <input type="text" name="subject" placeholder="E-Mail Betreff" required />
-            <span class="focus"></span>
-            <span class="animate scroll" style="--i: 3"></span>
-          </div>
+  <div class="skills-row">
+    <div class="skills-column" data-reveal data-delay="2">
+      <h3 class="title">Coding & Tech</h3>
+      <div class="skills-box">
+        <div class="skills-content">
+          <div class="progress"><h3>HTML <span>20%</span></h3><div class="bar"><span></span></div></div>
+          <div class="progress"><h3>CSS <span>10%</span></h3><div class="bar"><span></span></div></div>
+          <div class="progress"><h3>JavaScript <span>5%</span></h3><div class="bar"><span></span></div></div>
+          <div class="progress"><h3>Home Automation <span>90%</span></h3><div class="bar"><span></span></div></div>
         </div>
-
-        <div class="textarea-field">
-          <textarea name="message" cols="30" rows="10" placeholder="Nachricht eingeben..." required></textarea>
-          <span class="focus"></span>
-          <span class="animate scroll" style="--i: 4"></span>
-        </div>
-
-        <div class="btn-box btns">
-          <button type="submit" class="btn">Senden</button>
-          <span class="animate scroll" style="--i: 5"></span>
-        </div>
-      </form>
-    </section>
-
-    <!-- footer design -->
-    <footer class="footer">
-      <div class="footer-text">
-        <p>
-          Copyright &copy; 2026 Alexander Kai Scheiflinger |
-          <a href="impressum.html">Impressum</a> |
-          <a href="datenschutz.html">Datenschutz</a>
-        </p>
-        <span class="animate scroll" style="--i: 1"></span>
       </div>
+    </div>
 
-      <div class="footer-iconTop">
-        <a href="#"><i class="bx bx-up-arrow-alt"></i></a>
-        <span class="animate scroll" style="--i: 2"></span>
+    <div class="skills-column" data-reveal data-delay="3">
+      <h3 class="title">Handwerk & Beruf</h3>
+      <div class="skills-box">
+        <div class="skills-content">
+          <div class="progress"><h3>Logistik & Planung <span>90%</span></h3><div class="bar"><span></span></div></div>
+          <div class="progress"><h3>Excel & SAP <span>70%</span></h3><div class="bar"><span></span></div></div>
+          <div class="progress"><h3>Holzarbeiten <span>80%</span></h3><div class="bar"><span></span></div></div>
+          <div class="progress"><h3>Maler & Beschichtung <span>85%</span></h3><div class="bar"><span></span></div></div>
+        </div>
       </div>
-    </footer>
-    <script src="js/script.js"></script>
-  </body>
+    </div>
+  </div>
+</section>
+
+<!-- TOOLS -->
+<section class="tools" id="tools">
+  <h2 class="heading" data-reveal data-delay="1">Meine <span>Tools</span></h2>
+  <div class="tools-grid" data-reveal data-delay="2">
+    <a href="qrcode.html" class="tool-card">
+      <i class="bx bx-qr"></i>
+      <h3>QR-Code Generator</h3>
+      <p>Links in QR-Codes verwandeln – für Visitenkarten, Eierkartons, Flyer. PNG & SVG Download.</p>
+    </a>
+  </div>
+</section>
+
+<!-- KONTAKT -->
+<section class="contact" id="contact">
+  <h2 class="heading" data-reveal data-delay="1">Schreib <span>Mir</span></h2>
+
+  <div class="contact-direct" data-reveal data-delay="2">
+    <p>Am einfachsten erreichst du mich per E-Mail oder WhatsApp.</p>
+    <div class="btn-box btns">
+      <a href="mailto:scheiflinger@outlook.com?subject=Kontakt%20über%20HoamatWerk" class="btn">E-Mail schreiben</a>
+      <a href="https://wa.me/436601693967?text=Servus%20Alex!" class="btn btn-outline" target="_blank" rel="noopener">WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-text">
+    <p>
+      Copyright &copy; 2026 Alexander Kai Scheiflinger |
+      <a href="impressum.html">Impressum</a> |
+      <a href="datenschutz.html">Datenschutz</a>
+    </p>
+  </div>
+  <div class="footer-slogan">Echt Hondg'mocht</div>
+  <div class="footer-iconTop">
+    <a href="#"><i class="bx bx-up-arrow-alt"></i></a>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
 </html>

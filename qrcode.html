@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>QR-Generator – HoamatWerk</title>
+  <link href="https://fonts.googleapis.com/css2?family=Niconne&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="qrcode.min.js"></script>
+  <style>
+    .qr-page {
+      min-height: 100vh;
+      background: var(--bg-color);
+      padding: 12rem 9% 6rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.8rem;
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      margin-bottom: 3rem;
+      transition: 0.3s;
+    }
+    .back-link:hover { color: var(--main-color); }
+    .qr-wrap-card {
+      background: var(--second-bg-color);
+      border: 0.2rem solid rgba(200,149,108,0.3);
+      border-radius: 1.5rem;
+      padding: 4rem;
+      max-width: 56rem;
+      width: 100%;
+    }
+    .qr-wrap-card label {
+      display: block;
+      font-size: 1.4rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--text-muted);
+      margin-bottom: 1rem;
+    }
+    .qr-input-row {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+    .qr-input-row input {
+      flex: 1;
+      padding: 1.4rem 1.8rem;
+      font-size: 1.6rem;
+      color: var(--text-color);
+      background: var(--bg-color);
+      border: 0.2rem solid rgba(200,149,108,0.4);
+      border-radius: 0.6rem;
+      outline: none;
+      transition: border-color 0.3s;
+    }
+    .qr-input-row input:focus { border-color: var(--main-color); }
+    .qr-input-row button {
+      padding: 1.4rem 2.4rem;
+      background: var(--main-color);
+      color: var(--bg-color);
+      border-radius: 0.6rem;
+      font-size: 1.5rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .qr-input-row button:hover { background: var(--green-color); }
+    .qr-hint {
+      font-size: 1.3rem;
+      color: var(--text-muted);
+      margin-bottom: 2rem;
+    }
+    .qr-result {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+      border-top: 0.15rem solid rgba(200,149,108,0.25);
+      padding-top: 3rem;
+      margin-top: 1rem;
+    }
+    #qr-wrap canvas, #qr-wrap img { border-radius: 0.8rem; }
+    .dl-row { display: flex; gap: 1rem; }
+    .dl-btn {
+      padding: 1rem 2.2rem;
+      background: transparent;
+      color: var(--main-color);
+      border: 0.2rem solid var(--main-color);
+      border-radius: 0.6rem;
+      font-size: 1.4rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .dl-btn:hover { background: var(--main-color); color: var(--bg-color); }
+    .qr-url-label {
+      font-size: 1.3rem;
+      color: var(--text-muted);
+      word-break: break-all;
+      text-align: center;
+      max-width: 40rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="header sticky">
+    <a href="index.html" class="logo">
+      HoamatWerk
+      <span class="tagline">Echt Hondg'mocht</span>
+    </a>
+    <nav class="navbar">
+      <a href="index.html">← Zurück</a>
+    </nav>
+  </header>
+
+  <div class="qr-page">
+    <a href="index.html" class="back-link">
+      <i class="bx bx-arrow-back"></i> Zurück zur Startseite
+    </a>
+
+    <h2 class="heading">QR-Code <span>Generator</span></h2>
+
+    <div class="qr-wrap-card">
+      <label for="url-input">URL eingeben</label>
+      <div class="qr-input-row">
+        <input type="url" id="url-input" placeholder="https://dein-link.at/..." autocomplete="off" spellcheck="false" />
+        <button id="generate-btn">Generieren</button>
+      </div>
+      <p class="qr-hint">Funktioniert mit OneDrive, Links, Websites – alles was eine URL hat.</p>
+
+      <div class="qr-result" id="qr-result">
+        <div id="qr-wrap"></div>
+        <div class="dl-row">
+          <button class="dl-btn" id="dl-png">⬇ PNG</button>
+          <button class="dl-btn" id="dl-svg">⬇ SVG</button>
+        </div>
+        <p class="qr-url-label" id="qr-url-label"></p>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-text">
+      <p>Copyright &copy; 2026 Alexander Kai Scheiflinger |
+        <a href="impressum.html">Impressum</a> |
+        <a href="datenschutz.html">Datenschutz</a>
+      </p>
+    </div>
+    <div class="footer-slogan">Echt Hondg'mocht</div>
+    <div class="footer-iconTop">
+      <a href="#"><i class="bx bx-up-arrow-alt"></i></a>
+    </div>
+  </footer>
+
+  <script>
+    const btn   = document.getElementById('generate-btn');
+    const input = document.getElementById('url-input');
+    const wrap  = document.getElementById('qr-wrap');
+    const result= document.getElementById('qr-result');
+    const label = document.getElementById('qr-url-label');
+
+    btn.addEventListener('click', generate);
+    input.addEventListener('keydown', e => { if (e.key === 'Enter') generate(); });
+
+    function generate() {
+      const url = input.value.trim();
+      if (!url) return;
+      wrap.innerHTML = '';
+      new QRCode(wrap, {
+        text: url,
+        width: 220,
+        height: 220,
+        colorDark: '#3B2A1A',
+        colorLight: '#F5F0E8',
+        correctLevel: QRCode.CorrectLevel.H
+      });
+      label.textContent = url;
+      result.style.display = 'flex';
+    }
+
+    document.getElementById('dl-png').addEventListener('click', () => {
+      const canvas = wrap.querySelector('canvas');
+      if (!canvas) return;
+      const a = document.createElement('a');
+      a.download = 'hoamatwerk-qr.png';
+      a.href = canvas.toDataURL('image/png');
+      a.click();
+    });
+
+    document.getElementById('dl-svg').addEventListener('click', () => {
+      const canvas = wrap.querySelector('canvas');
+      if (!canvas) return;
+      const data = canvas.toDataURL('image/png');
+      const svg = `<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="220" height="220"><image href="${data}" width="220" height="220"/></svg>`;
+      const blob = new Blob([svg], { type: 'image/svg+xml' });
+      const a = document.createElement('a');
+      a.download = 'hoamatwerk-qr.svg';
+      a.href = URL.createObjectURL(blob);
+      a.click();
+    });
+  </script>
+</body>
+</html>
